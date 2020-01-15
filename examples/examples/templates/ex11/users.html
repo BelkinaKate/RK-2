@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Page</title>
+    <style type="text/css">
+        TABLE {
+         border: 5px double #000;
+        }
+        TD, TH {
+         padding: 5px; 
+         border: 1px solid rgb(183, 79, 125); 
+        }
+       </style>
+</head>
+<body>
+    <table>
+        {% for user in users %}
+        <tr>
+            <td>{{user.id}}</td>
+            <td>{{user.username}}</td>
+            <td>{{user.birthday}}</td>
+        </tr>
+    {% endfor %}
+    </table>
+</body>
+</html>
